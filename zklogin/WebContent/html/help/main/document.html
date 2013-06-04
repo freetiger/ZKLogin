@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script type='text/javascript' src='/zklogin/js/jquery.js'></script>
+<script type='text/javascript' src="/zklogin/js/jquery-highlight1.js"></script>
+<script type="text/javascript"> 
+
+
+    jQuery.urlParam = function(name){
+      
+	    var results = new RegExp('[\\?&amp;]' + name + '=([^&amp;#]*)').exec(window.location.href);
+        return decodeURIComponent( results[1] ) || 0;
+   
+    }
+
+    function get(name){
+	   
+    	if ( name=( new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search ) )
+	       return decodeURIComponent(name[1]);
+	
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() { 
+    
+        jQuery("<style type='text/css'> .highlight { background-color: yellow; } </style>").appendTo("head");
+        jQuery( 'body' ).highlight( jQuery.urlParam( 'highlight' ) , true);
+    
+    }, false );
+    
+    
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test html document</title>
+</head>
+<body>
+   <h1>Test html document</h1>
+   <img src="images/cross.png" alt="my image"> 
+
+   <div id="content">
+     <p>The fox went over the fence, and the fox again</p>
+     <p>Text higlighting is part of DynaCloud – where tags/keywords are automatically highlighted once they’re clicked – so I took that code and made it a stand-alone JavaScript text highlighting jQuery plugin.</p>   
+   </div>
+
+</body>
+</html>

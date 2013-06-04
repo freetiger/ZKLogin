@@ -1,0 +1,10 @@
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<zk>
+
+<window id="w" width="200px" title="Test echoEvent" border="normal" apply="ZKLogin.CBusyController" >
+  
+  <button id="longoperation" label="Echo Event"/>
+</window>
+
+</zk>

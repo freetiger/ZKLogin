@@ -1,0 +1,21 @@
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" ?>
+<zk>
+	<!-- create only when the currentUser is not an anonymous  -->
+	<borderlayout hflex="1" vflex="1" if="${sessionScope.userCredential.getUserName().equals('anonymous')==false}">
+		<north height="100px" border="none" >
+			<include src="/WEB-INF/zul/banner.zul"/>
+		</north>
+		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300" autoscroll="true">
+			<include src="/WEB-INF/zul/sidebar_accordion.zul"/>
+		</west>
+		<center id="mainContent" autoscroll="true" border="none" self="@insert(content)">
+			<!-- the main content will be insert to here -->
+		</center>
+		<south height="50px" border="none">
+			<include src="/WEB-INF/zul/footer.zul"/>
+		</south>
+	</borderlayout>
+	<hbox vflex="1" hflex="1" align="center" pack="center" spacing="20px" if="${sessionScope.userCredential.getUserName().equals('anonymous')}">
+		The next progress box always is english and not respect the position directive.....
+	</hbox>
+</zk>

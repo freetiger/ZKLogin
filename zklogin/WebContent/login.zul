@@ -1,0 +1,46 @@
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" ?>
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<!-- it is a login page, no authentication protection and use anonymous template -->
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/WEB-INF/zul/template-anonymous.zul"?>
+<zk>
+	<hbox self="@define(content)" vflex="1" hflex="1" align="center"
+		pack="center" spacing="20px">
+		<vlayout>
+			<window id="frmLogin"
+				apply="ZKLogin.CLoginController"
+				title="Login with you name" border="normal" hflex="min">
+				<vbox hflex="min" align="center">
+					<grid hflex="min">
+						<columns>
+							<column hflex="min" align="right" />
+							<column/>
+						</columns>
+						<rows>
+<!--
+							<row>
+								Calendar :
+ 						        <datebox id="edCalendar" width="200px"/>
+							</row>
+-->
+							<row>
+								Account :
+ 						        <combobox id="edAccount" autodrop="true" width="200px"/>
+							</row>
+							<row>
+								Password :
+								<textbox id="edPassword" type="password" width="200px" />
+							</row>
+						</rows>
+					</grid>
+					<label id="lbMessage" sclass="warn" value="&#160;" />
+					<div style="text-align: right;">
+					   <button id="btnLogin" label="Login" image="/imgs/check.png" />
+                       <button id="btnExit" label="Exit" image="/imgs/exit.png" />
+                       <button id="btnHelp" label="Help" image="/imgs/help.png" />
+					</div>
+				</vbox>
+			</window>
+			(use account='sirlordt' and password='123456' to login)
+		</vlayout>
+	</hbox>
+</zk>

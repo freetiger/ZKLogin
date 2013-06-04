@@ -1,0 +1,12 @@
+<zk>
+<groupbox id="mainGropuBox" title="remote frame" width="100%" height="800px" closable="false" apply="ZKLogin.CRemoteFrameController1">
+ 
+ <vlayout spacing="10px">
+
+       <iframe id="htmlframe" width="100%" height="400px" style="border: 1px solid black" />
+       
+ </vlayout>
+ 
+</groupbox>
+
+</zk>

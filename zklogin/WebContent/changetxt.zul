@@ -1,0 +1,35 @@
+<?page title="On Change Event" contentType="text/html;charset=UTF-8"?>
+
+<zk>
+
+    <window title="On Change Event" border="normal" apply="ZKLogin.COnChangeTXT">
+
+        <grid width="100%">
+
+            <rows>
+
+                <row>
+
+                    onChanging textbox:
+
+                    <textbox id="t1" />
+
+                </row>
+
+                <row>
+
+                    Instant copy:
+
+                    <textbox id="copy" readonly="true" />
+
+                </row>
+
+            </rows>
+
+        </grid>
+
+ 
+
+    </window>
+
+</zk>

@@ -1,0 +1,22 @@
+<tabbox id="TabBox" apply="ZKLogin.CSideBarAccordionController" width="100%" mold="accordion">
+    <tabs id="TabBoxTabs">
+        <tab label="Pruebas 1" />
+        <tab label="Pruebas 2" />
+        <tab label="Pruebas  3" />
+    </tabs>
+    <tabpanels id="TabBoxPanels" >
+       <tabpanel>
+         <vlayout spacing="10px">
+           <button id="btnTest1" label="Create tab in center 1" width="100%"/>
+           <button id="btnTest2" label="Include ZUL at runtime" width="100%"/>
+           <button id="btnTest3" label="Add child of remote zul" width="100%"/>
+           <button id="btnTest4" label="Add child of remote zul from jar" width="100%"/>
+           <button id="btnTest5" label="Add child iframe" width="100%"/>
+         </vlayout>
+       </tabpanel>
+       <tabpanel>
+       </tabpanel>
+       <tabpanel>
+       </tabpanel>
+    </tabpanels>
+</tabbox>    
